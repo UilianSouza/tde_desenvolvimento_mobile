@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     Float price = response.body().getBitcoin().get("brl");
 
-                    // Formatar o preço
-                    DecimalFormat formatter = new DecimalFormat("#,##0.00"); // Formato com vírgula como separador decimal
+
+                    DecimalFormat formatter = new DecimalFormat("#,##0.00");
                     String formattedPrice = formatter.format(price);
 
                     textView.setText("Preço do Bitcoin: R$ " + formattedPrice);
